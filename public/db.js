@@ -27,6 +27,7 @@ function saveRecord(record) {
 }
 
 function checkDatabase() {
+  console.log("indexeddb working");
   const transaction = db.transaction(["pending"], "readwrite");
   const store = transaction.objectStore("pending");
   const getAll = store.getAll();
